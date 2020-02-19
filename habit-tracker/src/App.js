@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import PlansContainer from './Containers/PlansContainer'
 import HabitsContainer from './Containers/HabitsContainer'
-import HomeContainer from './Containers/HomeContainer'
+
 import {
   BrowserRouter as Router,
   Link,
