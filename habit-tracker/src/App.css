@@ -3,16 +3,14 @@
     margin-top:50px;
     /* height: 200px; */
     width: 500px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: grey;
     border-radius: 25px;
-    background-color: rgb(246, 246, 252);
+    background-color: rgb(244, 244, 247);
     float: left;
 
 }
 h2{
     font-family: 'Dancing Script', cursive;
+    color: rgb(194, 190, 201);
 }
 .day-container-content{
     margin-left: 10px;

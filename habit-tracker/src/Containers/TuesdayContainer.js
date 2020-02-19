@@ -35,10 +35,11 @@ export class TuesdayContainer extends Component {
     }}
 
     const mapStateToProps = state => {
-
-        // console.log(state.mon)
+        // console.log(state.tue)
+     
         return {
             tues: state.tue
+            
         }
         
     }

@@ -32,7 +32,7 @@ export const fetchTuesPlans = () => {
     return (dispatch) => {
         return fetch('http://localhost:3000/tues')
         .then(res => res.json())
-        .then(tues => {
+        .then(tues => { 
             dispatch({type: "SET_TUESPLANS", payload: tues})
             
         })

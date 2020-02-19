@@ -1,10 +1,10 @@
 
 
 import React, { Component } from 'react'
-import { addTuesPlan } from '../../Actions/Tuesday/actions'
+import { addWedPlan } from '../../Actions/Wednesday/actions'
 import { connect } from 'react-redux'
 
-export class TuesForm extends Component {
+export class WedForm extends Component {
 
   constructor(props) {
     super(props);
@@ -22,7 +22,7 @@ export class TuesForm extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.addTuesPlan( this.state );
+    this.props.addWedPlan( this.state );
   }
 
   render() {
@@ -40,4 +40,4 @@ export class TuesForm extends Component {
   }
 }
 
-export default connect(null, { addTuesPlan })(TuesForm)
+export default connect(null, { addWedPlan })(WedForm)
