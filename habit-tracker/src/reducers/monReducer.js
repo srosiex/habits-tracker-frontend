@@ -4,7 +4,7 @@
     switch(action.type){
         // case 'SET_MONSPLAN':
         //     return [...action.payload]
-        case "SET_MONPLANS":
+        case 'SET_MONPLANS':
             return [...action.payload]
         case 'ADD_MONPLAN':
             return [...state, action.payload]

@@ -22,10 +22,9 @@ export const addMonPlan = monPlan => {
           'Content-Type': 'application/json'
         }
       })
-      .then(res => res.json())
-      .then(mon => {
-        dispatch({type: "REMOVE_MONPLAN", payload: mon})
-      })
+      .then(resp => resp.json())
+      .then(mon => dispatch({type: 'REMOVE_MONPLAN', payload: mon.id}))
+
     }
   }
 
@@ -34,7 +33,6 @@ export const fetchMonPlans = () => {
         return fetch('http://localhost:3000/mons')
         .then(res => res.json())
         .then(mons => {
-            
             dispatch({type: "SET_MONPLANS", payload: mons})
             
         })

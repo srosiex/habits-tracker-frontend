@@ -10,6 +10,7 @@ import {
   Switch
 } from 'react-router-dom'
 
+
 function App() {
   return (
   
@@ -28,7 +29,6 @@ function App() {
         </Route>
 
        </Switch>
-    Hello
      </div>
      </Router>
 

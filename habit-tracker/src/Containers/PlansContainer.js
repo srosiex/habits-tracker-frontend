@@ -10,6 +10,7 @@ import {
   } from 'react-router-dom'
   import Tuesday from '../Components/Tuesday'
   import MondayContainer from './MondayContainer'
+  import TuesdayContainer from './MondayContainer'
 
 
 export default function PlansContainer(props){
@@ -24,6 +25,7 @@ export default function PlansContainer(props){
                 <Switch>
                     <Route path={`${path}/monday`}>
                         <MondayContainer />
+                        <TuesdayContainer />
                     </Route>
                     <Route path={`${path}/tuesday`}>
                         <Tuesday />

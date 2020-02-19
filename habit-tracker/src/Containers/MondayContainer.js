@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import Form from '../Components/Form'
+import MonForm from '../Components/Forms/MonForm'
 import Monday from '../Components/Monday'
 import { fetchMonPlans } from '../Actions/index'
+
 
 
 export class MondayContainer extends Component {
@@ -24,10 +25,13 @@ export class MondayContainer extends Component {
         
         return (
             
-        <div>
-            <h3>Monday</h3>
-            <Form addMonPlan={this.props.addMonPlan} />
+        <div className="day-container">
+            <div className="day-container-content">
+                <h2>Monday</h2>
+            <MonForm className="monday-form" addMonPlan={this.props.addMonPlan} />
             {mons}
+            <a href="http://localhost:3002/plans/monday">View all</a>
+            </div>
         </div>
 
         )
@@ -36,7 +40,7 @@ export class MondayContainer extends Component {
 
     const mapStateToProps = state => {
 
-        console.log(state.mon)
+        // console.log(state.mon)
         return {
             mons: state.mon
         }

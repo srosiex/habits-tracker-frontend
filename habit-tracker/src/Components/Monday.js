@@ -4,10 +4,11 @@ import { removeMonPlan } from '../Actions/index'
 
 const Monday = ({ mon, removeMonPlan }) => {
     return (
-        <li className="collection-item">
+        <li className="plan-item">
             {mon.plan} <button onClick={()=>removeMonPlan(mon.id)}>x</button>
-        </li>
         
+        </li>
+       
     )
 }
 

@@ -1,0 +1,37 @@
+.day-container{
+    margin-left: 10px;
+    margin-top:50px;
+    /* height: 200px; */
+    width: 500px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    border-radius: 25px;
+    background-color: rgb(246, 246, 252);
+    float: left;
+
+}
+h2{
+    font-family: 'Dancing Script', cursive;
+}
+.day-container-content{
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.title{
+    width: 30px;
+    margin-top: -10px;
+    margin-left:5px;
+    background-color: hotpink;
+}
+
+.plan-item{
+
+    height: 30px;
+    width: 200px;
+    /* margin-bottom: 10px; */
+    margin-left: 15px;
+    /* float: left; */
+    font-size: 11px;
+
+}
