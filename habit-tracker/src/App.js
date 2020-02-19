@@ -17,7 +17,7 @@ function App() {
   
      <Router>
        <div className="App">
-       <Link to={`/plans`}>Plans</Link>
+       <Link to={`/plans`}>Plans</Link>-
        <Link to={`/habits`}>Habits</Link>
        <hr />
 

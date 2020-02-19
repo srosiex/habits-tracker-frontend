@@ -2,20 +2,21 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import ThurForm from '../Components/Forms/ThurForm'
 import Thursday from '../Components/Thursday'
-import { fetchThurPlans } from '../Actions/Thursday/action.js'
+import { fetchThurPlans } from '../Actions/Thursday/actions'
 
 
 
 export class ThursdayContainer extends Component {
 
     componentDidMount(){
+       
         this.props.fetchThurPlans()
         
     }
 
 
     render(){
-        // const thurs = this.props.thurs.map(( thur, i ) => <Thursday key={i} thur={thur} />)
+        const thurs = this.props.thurs.map(( thur, i ) => <Thursday key={i} thur={thur} />)
         
      
         
@@ -25,7 +26,7 @@ export class ThursdayContainer extends Component {
             <div className="day-container-content">
                 <h2>Thursday</h2>
             <ThurForm className="thursday-form" addThurPlan={this.props.addThurPlan} />
-            {/* {thurs} */}
+            {thurs}
             <a href="http://localhost:3002/plans/thursday">View all</a>
             </div>
         </div>

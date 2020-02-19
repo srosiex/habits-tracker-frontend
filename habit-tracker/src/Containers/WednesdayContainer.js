@@ -35,7 +35,7 @@ export class WednesdayContainer extends Component {
     }}
 
     const mapStateToProps = state => {
-        console.log(state)
+        // console.log(state)
      
         return {
             weds: state.wed

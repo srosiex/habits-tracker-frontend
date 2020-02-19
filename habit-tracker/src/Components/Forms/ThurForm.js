@@ -1,7 +1,7 @@
 
 
 import React, { Component } from 'react'
-import { addThurPlan } from '../../Actions/Thursday/action.js'
+import { addThurPlan } from '../../Actions/Thursday/actions'
 import { connect } from 'react-redux'
 
 export class ThurForm extends Component {

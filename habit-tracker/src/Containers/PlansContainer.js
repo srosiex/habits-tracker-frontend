@@ -41,8 +41,10 @@ export default function PlansContainer(props){
 
                 </Switch>
 
+{/* 
+                <MondayContainer /><TuesdayContainer /><WednesdayContainer /><ThursdayContainer /> */}
             </div>
         </Router>
-        
+
     )
 }

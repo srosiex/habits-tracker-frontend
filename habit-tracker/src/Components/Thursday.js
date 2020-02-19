@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { removeThurPlan } from '../Actions/Thursday/action.js'
+import { removeThurPlan } from '../Actions/Thursday/actions'
 
 const Thursday = ({ thur, removeThurPlan }) => {
     return (
