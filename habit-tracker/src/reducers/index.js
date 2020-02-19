@@ -3,6 +3,9 @@ import { monReducer } from './monReducer'
 import { combineReducers } from 'redux'
 
 const rootReducer = combineReducers({
-    monPlan: monReducer,
+    mon: monReducer,
 })
+
+
+
 export default rootReducer;

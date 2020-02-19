@@ -1,7 +1,14 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { removeMonPlan } from '../Actions/index'
 
-export default function Monday(props){
-    return(
-        <h1>Monday</h1>
+const Monday = ({ mon, removeMonPlan }) => {
+    return (
+        <li className="collection-item">
+            {mon.plan} <button onClick={()=>removeMonPlan(mon.id)}>x</button>
+        </li>
+        
     )
 }
+
+export default connect (null, {removeMonPlan})(Monday)

@@ -8,11 +8,11 @@ import {
     Switch,
     useRouteMatch
   } from 'react-router-dom'
-  import Monday from '../Components/Monday'
   import Tuesday from '../Components/Tuesday'
+  import MondayContainer from './MondayContainer'
 
 
-export default function MonContainer(props){
+export default function PlansContainer(props){
     const {path, url} = useRouteMatch()
 
     return(
@@ -23,7 +23,7 @@ export default function MonContainer(props){
 
                 <Switch>
                     <Route path={`${path}/monday`}>
-                        <Monday />
+                        <MondayContainer />
                     </Route>
                     <Route path={`${path}/tuesday`}>
                         <Tuesday />
