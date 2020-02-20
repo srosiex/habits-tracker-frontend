@@ -13,6 +13,7 @@ import {
   import TuesdayContainer from './TuesdayContainer'
   import WednesdayContainer from './WednesdayContainer'
   import ThursdayContainer from './ThursdayContainer'
+  import FridayContainer from './FridayContainer'
 
 
 export default function PlansContainer(props){
@@ -25,6 +26,7 @@ export default function PlansContainer(props){
                 <Link to={`${url}/tuesday`}>Tuesday</Link>
                 <Link to={`${url}/wednesday`}>Wednesday</Link>
                 <Link to={`${url}/thursday`}>Thursday</Link>
+                <Link to={`${url}/friday`}>Friday</Link>
                 <Switch>
                     <Route path={`${path}/monday`}>
                         <MondayContainer />
@@ -37,6 +39,9 @@ export default function PlansContainer(props){
                     </Route>
                     <Route path={`${path}/thursday`}>
                         <ThursdayContainer />
+                    </Route>
+                    <Route path={`${path}/friday`}>
+                        <FridayContainer />
                     </Route>
 
                 </Switch>

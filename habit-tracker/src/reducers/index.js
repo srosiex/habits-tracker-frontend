@@ -4,12 +4,14 @@ import { combineReducers } from 'redux'
 import { tuesReducer } from './tuesReducer';
 import { wedReducer } from './wedReducer';
 import { thurReducer } from './thurReducer';
+import { friReducer } from './friReducer';
 
 const rootReducer = combineReducers({
     mon: monReducer,
     tue: tuesReducer,
     wed: wedReducer,
-    thur: thurReducer
+    thur: thurReducer,
+    fri: friReducer
 })
 
 
