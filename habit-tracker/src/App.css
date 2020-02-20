@@ -33,3 +33,18 @@ h2{
     font-size: 11px;
 
 }
+
+.habit-item{
+    margin-left: 10px;
+    margin-top:50px;
+    /* height: 200px; */
+    width: 500px;
+    border-radius: 25px;
+    background-color: rgb(244, 244, 247);
+}
+.habit-container{
+    margin-left: 10px;
+    margin-top:50px;
+    /* height: 200px; */
+
+}
