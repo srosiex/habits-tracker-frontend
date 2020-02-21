@@ -10,6 +10,15 @@
         case 'REMOVE_HABIT':
             let newHabits = state.filter(habit => habit.id !== action.payload)
             return [...newHabits]
+        case 'INCREASE_DAY':
+             return state.map((habit)=>{
+                 if(habit.id === action.id){
+                     return {
+                         ...habit,
+                         day_count: action.payload.newCount
+                     }
+                 }
+             })
 
         default:
             return state

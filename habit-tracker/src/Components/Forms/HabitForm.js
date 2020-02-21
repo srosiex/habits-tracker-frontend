@@ -11,6 +11,7 @@ export class HabitForm extends Component {
 
     this.state = {
       name: '',
+      goal: '',
     }
   }
 
@@ -30,7 +31,10 @@ export class HabitForm extends Component {
       <form onSubmit={ this.handleSubmit }>
     
         <div className="input-field">
-          <input type="text" name="name" id="name" value={ this.state.name } onChange={ this.handleChange }/>
+          <input type="text" name="name" id="name" value={ this.state.name } onChange={ this.handleChange } placeholder="Enter habit"/>
+          <label htmlFor="name" />
+          Goal:
+          <input type="number" min="1" max="7" name="goal" id="name" value={ this.state.goal } onChange={ this.handleChange }/>
           <label htmlFor="name" />
         </div>
 

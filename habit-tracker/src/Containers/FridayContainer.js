@@ -36,7 +36,7 @@ export class FridayContainer extends Component {
     }}
 
     const mapStateToProps = state => {
-        console.log(state)
+
      
         return {
             fris: state.fri

@@ -6,7 +6,12 @@ export class HabitWeek extends Component{
     state = {
         monColor: "#fff",
         tuesColor: "#fff",
-        wedsColor: "#fff"
+        wedsColor: "#fff",
+        thursColor: "#fff",
+        frisColor: "#fff",
+        satsColor: "#fff",
+        sunsColor: "#fff"
+
       };
     
       // onClicks = () => {
@@ -23,6 +28,18 @@ export class HabitWeek extends Component{
         if (e.target.id === "w") {
           this.setState({ wedsColor: "#d3e2e3" });
         }
+        if (e.target.id === "th") {
+          this.setState({ thursColor: "#d3e2e3" });
+        }
+        if (e.target.id === "f") {
+          this.setState({ frisColor: "#d3e2e3" });
+        }
+        if (e.target.id === "s") {
+          this.setState({ satsColor: "#d3e2e3" });
+        }
+        if (e.target.id === "su") {
+          this.setState({ sunsColor: "#d3e2e3" });
+        }
       };
     
       handleClear = e => {
@@ -30,16 +47,20 @@ export class HabitWeek extends Component{
           this.setState({
             monColor: "#fff",
             tuesColor: "#fff",
-            wedsColor: "#fff"
+            wedsColor: "#fff",
+            thursColor: "#fff",
+            frisColor: "#fff",
+            satsColor: "#fff",
+            sunsColor: "#fff"
           });
         }
       };
     
       render() {
         return (
-          <div>
+          <div className="habit_week">
             <center>
-              <table>
+              <table >
                 <thead>
                   <tr>
                     <th
@@ -63,13 +84,41 @@ export class HabitWeek extends Component{
                     >
                       Weds
                     </th>
+                    <th
+                      id="th"
+                      bgcolor={this.state.thursColor}
+                      onClick={this.onClicks}
+                    >
+                      Thur
+                    </th>
+                    <th
+                      id="f"
+                      bgcolor={this.state.frisColor}
+                      onClick={this.onClicks}
+                    >
+                      Fri
+                    </th>
+                    <th
+                      id="s"
+                      bgcolor={this.state.satsColor}
+                      onClick={this.onClicks}
+                    >
+                      Sat
+                    </th>
+                    <th
+                      id="su"
+                      bgcolor={this.state.sunsColor}
+                      onClick={this.onClicks}
+                    >
+                      Sun
+                    </th>
                   </tr>
                 </thead>
               </table>
             </center>
-            <button id="clearButton" onClick={this.handleClear}>
+            <center><button id="clearButton" onClick={this.handleClear}>
               Clear
-            </button>
+            </button></center>
           </div>
         );
       }

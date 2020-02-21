@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import PlansContainer from './Containers/PlansContainer'
 import HabitsContainer from './Containers/HabitsContainer'
+import HomeContainer from './Containers/HomeContainer'
+
 
 import {
   BrowserRouter as Router,
@@ -10,6 +12,8 @@ import {
   Route,
   Switch
 } from 'react-router-dom'
+import { MondayContainer } from './Containers/MondayContainer';
+
 
 
 function App() {
@@ -17,20 +21,27 @@ function App() {
   
      <Router>
        <div className="App">
-       <Link to={`/plans`}>Plans</Link>-
+         <Link to={`/`}>Home</Link>
+       <Link to={`/plans`}>Plans</Link>
        <Link to={`/habits`}>Habits</Link>
-       <hr />
+       <br />
 
        <Switch>
-  
+
+       <Route exact path={`/`}>
+          <HomeContainer />
+        </Route>
+    
+
         <Route path={`/habits`}>
           <HabitsContainer />
         </Route>
+
         <Route path={'/plans'}>
           <PlansContainer />
         </Route>
 
-       </Switch>
+        </Switch>
      </div>
      </Router>
 

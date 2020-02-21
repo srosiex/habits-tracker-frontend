@@ -38,4 +38,23 @@ export const addHabit = habit => {
         })
     }
   }
+
+  export const increaseDays = (habitId, habitName, habitGoal, habitCount) => {
+    // const habit = {habitId, habitName, habitGoal, habitCount}
+      return (dispatch) => {
+     
+        return fetch(`http://localhost:3000/habits/${habitId}`, {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(console.log({habitId: habitId, habitName: habitName, habitGoal: habitGoal, habitCount: habitCount}))
+        })
+        .then(resp => resp.json())
+        .then(habit => {
+          dispatch({type: "INCREASE_HABIT", payload: habit.days_complete})
+        })
+      }
+    }
+  
   

@@ -1,14 +1,46 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { removeHabit } from '../Actions/Habit'
+// import { increaseDays } from '../Actions/Habit'
 import { HabitWeek } from '../Containers/HabitWeek'
 
-const Habit = ({ habit, removeHabit }) => {
+const Habit = ({ habit, removeHabit, increaseDays }) => {
+
+
+    
+    let goalComplete = ({habit})=> {
+        let g = habit.goal
+        let d = habit.days_complete
+        if(d === g){
+            return("Complete")
+        }else{
+            return("Not Complete")
+        }
+    }
+
+    // const handleAdd = () =>{
+    //     let newCount = habit.days_complete + 1
+    //      habit.days_complete = newCount
+    //      console.log(newCount)
+        
+    // }
+
+    // const handleSubmit = (habit) =>{
+    //     increaseDays(habit)
+    // }
+
+
     return (
-        <li className="habit-item">
-            {habit.name} <button onClick={()=>removeHabit(habit.id)}>x</button>
+        <center><li className="habit-item">
+            {habit.name} - goal: {habit.goal} <button onClick={()=>removeHabit(habit.id)}>x</button>
+            <br />
+        {/* <br />Days Complete: {habit.days_complete} <button onClick={()=>increaseDays(habit.id, habit.name, habit.goal, habit.days_complete+1)}>+</button> */}
+        
+        <br />
         <HabitWeek />
-        </li>
+        
+        <br />{goalComplete({habit})}
+        </li></center>
        
     )
 }
