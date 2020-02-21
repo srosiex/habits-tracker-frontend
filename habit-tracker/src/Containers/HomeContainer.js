@@ -4,7 +4,9 @@ export default function HomeContainer() {
 
     
         return(
-            "Click plans or habit to get started"
+            <div className="home_container">
+            Click plans or habit to get started
+            </div>
         )
     
 }

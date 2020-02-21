@@ -23,12 +23,14 @@ export default function PlansContainer(props){
         
             <center><div className="plans-container">
 {/* {/*  */}
-                <Link to={`${url}/all`}>View All</Link> 
-                <Link to={`${url}/monday`}>Monday</Link>
-                <Link to={`${url}/tuesday`}>Tuesday</Link>
-                <Link to={`${url}/wednesday`}>Wednesday</Link>
-                <Link to={`${url}/thursday`}>Thursday</Link>
-                <Link to={`${url}/friday`}>Friday</Link>
+        <div className="plans_links">
+                <Link className="plink" to={`${url}/all`}>View All</Link>  
+                <Link className="plink"  to={`${url}/monday`}>Monday</Link>  
+                <Link className="plink"  to={`${url}/tuesday`}>Tuesday</Link>  
+                <Link className="plink"  to={`${url}/wednesday`}>Wednesday</Link>  
+                <Link className="plink" to={`${url}/thursday`}>Thursday</Link>  
+                <Link className="plink" to={`${url}/friday`}>Friday</Link>
+                </div>
 
                 <Switch>
 
@@ -58,7 +60,7 @@ export default function PlansContainer(props){
 
                 </Switch>
                 
-
+               
 {/* 
                 <MondayContainer /><TuesdayContainer /><WednesdayContainer /><ThursdayContainer /> */}
             </div></center>

@@ -5,12 +5,15 @@ import PlansContainer from './Containers/PlansContainer'
 import HabitsContainer from './Containers/HabitsContainer'
 import HomeContainer from './Containers/HomeContainer'
 
+import Navbar from './Containers/Navbar'
+
 
 import {
   BrowserRouter as Router,
   Link,
   Route,
-  Switch
+  Switch,
+  NavLink
 } from 'react-router-dom'
 import { MondayContainer } from './Containers/MondayContainer';
 
@@ -21,10 +24,7 @@ function App() {
   
      <Router>
        <div className="App">
-         <Link to={`/`}>Home</Link>
-       <Link to={`/plans`}>Plans</Link>
-       <Link to={`/habits`}>Habits</Link>
-       <br />
+    <Navbar />
 
        <Switch>
 
