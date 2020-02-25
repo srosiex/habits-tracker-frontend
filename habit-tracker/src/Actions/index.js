@@ -1,39 +1,46 @@
-export const addMonPlan = monPlan => {
+export const addPlan = (day, plan) => {
+
     return (dispatch) => {
-      return fetch('http://localhost:3000/mons', {
+     if(day === "Monday"){
+       let d = ["mon"]
+     }
+      return fetch(`http://localhost:3000/${day.toLowerCase()}`, {
+        
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({mon: monPlan})
+        body: JSON.stringify(console.log({d: plan}))
+        
       })
       .then(resp => resp.json())
-      .then(monPlan => {
-        dispatch({type: "ADD_MONPLAN", payload: monPlan})
+      .then(plan => {
+        dispatch({type: "ADD_PLAN", payload: {day, plan}})
       })
     }
   }
 
-  export const removeMonPlan = monId => {
+  export const removePlan = (day, planId) => {
     return (dispatch) => {
-      return fetch(`http://localhost:3000/mons/${monId}`,{
+      return fetch(`http://localhost:3000/${day.toLowerCase()}/${planId}`,{
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json'
         }
       })
       .then(resp => resp.json())
-      .then(mon => dispatch({type: 'REMOVE_MONPLAN', payload: mon.id}))
+      .then(plan => {
+        dispatch({type: 'REMOVE_PLAN', payload: {day, planId}})})
 
     }
   }
 
-export const fetchMonPlans = () => {
+export const fetchPlans = (day) => {
     return (dispatch) => {
-        return fetch('http://localhost:3000/mons')
+        return fetch(`http://localhost:3000/${day.toLowerCase()}`)
         .then(res => res.json())
-        .then(mons => {
-            dispatch({type: "SET_MONPLANS", payload: mons})
+        .then(plans => {
+            dispatch({type: "SET_PLANS", payload: {day, plans}})
             
         })
     }

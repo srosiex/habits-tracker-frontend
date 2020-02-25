@@ -4,14 +4,15 @@ import { removeHabit } from '../Actions/Habit'
 // import { increaseDays } from '../Actions/Habit'
 import { HabitWeek } from '../Containers/HabitWeek'
 
-const Habit = ({ habit, removeHabit, increaseDays }) => {
+const Habit = ({ habit, removeHabit }) => {
+
 
 
     
+    
+    
     let goalComplete = ({habit})=> {
-        let g = habit.goal
-        let d = habit.days_complete
-        if(d === g){
+        if(habit.goal === habit.days_complete){
             return("Complete")
         }else{
             return("Not Complete")

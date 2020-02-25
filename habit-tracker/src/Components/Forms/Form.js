@@ -1,10 +1,9 @@
 
 
 import React, { Component } from 'react'
-import { addMonPlan } from '../../Actions/index'
-import { connect } from 'react-redux'
 
-export class MonForm extends Component {
+
+export default class Form extends Component {
 
   constructor(props) {
     super(props);
@@ -22,7 +21,7 @@ export class MonForm extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.addMonPlan( this.state );
+    this.props.addPlan( this.props.day, this.state );
   }
 
   render() {
@@ -34,10 +33,8 @@ export class MonForm extends Component {
           <label htmlFor="plan" />
         </div>
 
-        <input type="submit" value="Create Plan" className="btn" />
+        <input type="submit" value="Create Plan" className="form-submit" />
       </form>
     )
   }
 }
-
-export default connect(null, { addMonPlan })(MonForm)

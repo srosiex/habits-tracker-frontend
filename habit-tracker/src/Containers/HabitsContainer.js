@@ -30,7 +30,7 @@ export class HabitContainer extends Component {
             <div className="habit-container-content">
                 <h2>Habits</h2>
             <HabitForm className="habit-form" addHabit={this.props.addHabit} />
-            {habits}
+            {habits} 
             </div>
         </div></center>
 

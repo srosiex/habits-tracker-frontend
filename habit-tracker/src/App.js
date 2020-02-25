@@ -15,7 +15,6 @@ import {
   Switch,
   NavLink
 } from 'react-router-dom'
-import { MondayContainer } from './Containers/MondayContainer';
 
 
 

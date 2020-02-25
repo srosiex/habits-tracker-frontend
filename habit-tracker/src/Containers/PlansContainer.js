@@ -7,13 +7,9 @@ import {
     Switch,
     useRouteMatch
   } from 'react-router-dom'
-  import MondayContainer from './MondayContainer'
-  import TuesdayContainer from './TuesdayContainer'
-  import WednesdayContainer from './WednesdayContainer'
-  import ThursdayContainer from './ThursdayContainer'
-  import FridayContainer from './FridayContainer'
+  import DayContainer from './DayContainer'
   import AllPlans from './AllPlans'
-import Monday from '../Components/Monday';
+
 
 
 export default function PlansContainer(props){
@@ -39,30 +35,29 @@ export default function PlansContainer(props){
                     </Route>
                     
                     <Route path={`${path}/monday`}>
-                        <MondayContainer />
+                        <DayContainer day="Monday" />
                     </Route>
 
-                    <Route path={`${path}/tuesday`}>
-                        <TuesdayContainer />
+                     <Route path={`${path}/tuesday`}>
+                        <DayContainer day="Tuesday"/>
                     </Route>
 
                     <Route path={`${path}/wednesday`}>
-                        <WednesdayContainer />
+                    <DayContainer day="Wednesday"/>
                     </Route>
 
+        
+
                     <Route path={`${path}/thursday`}>
-                        <ThursdayContainer />
+                    <DayContainer day="Thursday"/>
                     </Route>
 
                     <Route path={`${path}/friday`}>
-                        <FridayContainer />
-                    </Route>
+                    <DayContainer day="Friday"/>                    </Route> 
 
                 </Switch>
                 
                
-{/* 
-                <MondayContainer /><TuesdayContainer /><WednesdayContainer /><ThursdayContainer /> */}
             </div></center>
         
 

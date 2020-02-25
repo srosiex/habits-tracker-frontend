@@ -1,5 +1,5 @@
 import React from 'react'
-import { monReducer } from './monReducer'
+import { dayReducer } from './dayReducer'
 import { combineReducers } from 'redux'
 import { tuesReducer } from './tuesReducer';
 import { wedReducer } from './wedReducer';
@@ -8,11 +8,11 @@ import { friReducer } from './friReducer';
 import { habitReducer } from './habitReducer';
 
 const rootReducer = combineReducers({
-    mon: monReducer,
-    tue: tuesReducer,
-    wed: wedReducer,
-    thur: thurReducer,
-    fri: friReducer,
+    plans: dayReducer,
+    // tue: tuesReducer,
+    // wed: wedReducer,
+    // thur: thurReducer,
+    // fri: friReducer,
     habit: habitReducer
 })
 
