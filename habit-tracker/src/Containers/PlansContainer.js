@@ -12,7 +12,7 @@ import {
 
 
 
-export default function PlansContainer(props){
+export default function PlansContainer(){
     const {path, url} = useRouteMatch()
 
     return(
@@ -53,7 +53,8 @@ export default function PlansContainer(props){
                     </Route>
 
                     <Route path={`${path}/friday`}>
-                    <DayContainer day="Friday"/>                    </Route> 
+                    <DayContainer day="Friday"/>                   
+                    </Route> 
 
                 </Switch>
                 

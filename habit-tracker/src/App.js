@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import PlansContainer from './Containers/PlansContainer'
 import HabitsContainer from './Containers/HabitsContainer'

@@ -21,7 +21,7 @@ export class DayContainer extends Component {
     render(){
         const plans = this.props.plans.map(( plan, i ) => <Plan key={i} plan={plan} day={this.props.day} />)
         
-        //    const mons = this.mons.map(p => p.plan)
+
         
         return (
             
@@ -40,7 +40,6 @@ export class DayContainer extends Component {
 
     const mapStateToProps = (state, props) => {
         const day = props.day
-        console.log(state)
         return {
             plans: state.plans[day]
         }

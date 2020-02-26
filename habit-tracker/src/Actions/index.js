@@ -1,16 +1,14 @@
 export const addPlan = (day, plan) => {
 
     return (dispatch) => {
-     if(day === "Monday"){
-       let d = ["mon"]
-     }
+
       return fetch(`http://localhost:3000/${day.toLowerCase()}`, {
         
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(console.log({d: plan}))
+        body: JSON.stringify({plan})
         
       })
       .then(resp => resp.json())
