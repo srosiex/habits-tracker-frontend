@@ -22,6 +22,9 @@ export default class Form extends Component {
   handleSubmit = event => {
     event.preventDefault();
     this.props.addPlan( this.props.day, this.state );
+    this.setState({
+      plan: ''
+    })
   }
 
   render() {
