@@ -2,8 +2,7 @@ export const addPlan = (day, plan) => {
 
     return (dispatch) => {
 
-      return fetch(`http://localhost:3000/${day.toLowerCase()}`, {
-        
+      return fetch(`http://localhost:3000/plans`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -35,7 +34,7 @@ export const addPlan = (day, plan) => {
 
 export const fetchPlans = (day) => {
     return (dispatch) => {
-        return fetch(`http://localhost:3000/${day.toLowerCase()}`)
+        return fetch(`http://localhost:3000/plans?day=${day}`)
         .then(res => res.json())
         .then(plans => {
             dispatch({type: "SET_PLANS", payload: {day, plans}})
